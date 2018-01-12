@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FavoriteThings.Favorites;
 
 namespace FavoriteThings
 {
@@ -13,7 +10,7 @@ namespace FavoriteThings
             var dogs = new Dogs();
 
             Console.WriteLine("I love dogs!");
-            string inputString = dogs.DogType();
+            string inputString = Dogs();
         }
     }
 }
