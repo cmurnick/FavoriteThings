@@ -10,6 +10,10 @@ namespace FavoriteThings
     {
         static void Main(string[] args)
         {
+            var dogs = new Dogs();
+
+            Console.WriteLine("I love dogs!");
+            string inputString = dogs.DogType();
         }
     }
 }
