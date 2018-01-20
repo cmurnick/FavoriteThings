@@ -41,7 +41,7 @@ namespace FavoriteThings
             public Food(string name)
             {
                 _name = name;
-                Console.WriteLine("\n" + "This food isd" + _name);
+                PrintName();
             }
 
             public void PrintName()

@@ -40,7 +40,7 @@ namespace FavoriteThings
         public Yoga(string pose)
         {
             _pose = pose;
-            Console.WriteLine("\n" + "This pose is called" + _pose);
+            PrintName();
         }
 
         public void PrintName()

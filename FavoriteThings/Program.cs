@@ -13,20 +13,15 @@ namespace FavoriteThings
 
 
             var bulldog = new Bulldog("Patrick");
-
-            Console.WriteLine("My Bulldog's name is: " + bulldog.Name);
-
-            Console.ReadLine();
+            var bulldog2 = new Bulldog("Dozer \n" );
+            
 
             var yoga = new Yoga("Childs Pose");
-
-            Console.WriteLine("This yoga pose is: " + yoga.Pose);
-
-            Console.ReadLine();
+            var yoga2 = new Yoga("Downward Dog \n");
 
             var food = new Food("Kale Salad");
+            var food2 = new Food("Buffalo Temph \n");
 
-            Console.WriteLine("This food is: " + food.Name);
 
             Console.ReadLine();
 

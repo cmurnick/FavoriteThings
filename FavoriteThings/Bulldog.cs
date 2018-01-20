@@ -45,9 +45,9 @@ namespace FavoriteThings
         public Bulldog(string name)
         {
             _name = name;
-            Console.WriteLine("\n" + "My bulldog's Name is" + _name);
-
-
+            //Console.WriteLine("\n" + "My bulldog's Name is" + _name);
+            PrintName();
+            
         }
 
         public void PrintName()
