@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace FavoriteThings
 {
@@ -14,14 +14,35 @@ namespace FavoriteThings
 
             var bulldog = new Bulldog("Patrick");
             var bulldog2 = new Bulldog("Dozer \n" );
-            
 
-            var yoga = new Yoga("Childs Pose");
-            var yoga2 = new Yoga("Downward Dog \n");
+            var yogaWorld = new List<Yoga>
+            {
+                new Yoga { Pose = "Shavasna", Hot= false, Studio = "Half Moon"},
+                new Yoga { Pose = "Pigeon", Hot= true, Studio = "Shakti" }
+            };
 
-            var food = new Food("Kale Salad");
-            var food2 = new Food("Buffalo Temph \n");
+            foreach (var yoga in yogaWorld)
+            {
+                Console.WriteLine($"{yoga.Studio} is {(yoga.Hot ? "Toasty" : "bearable")}");
+                Console.WriteLine(yoga.WhereToGo());
+            }
 
+            var foods = new List<Food>
+            {
+                new Food { Name = "Pizza", FoodGroup= "Junk", Vegan = false},
+                new Food { Name = "Kale Salad", FoodGroup = "Vegetable", Vegan = true},
+                new Food { Name = "Buffalo Temph", FoodGroup = "Healthy", Vegan = true}
+            };
+
+            foreach(var food in foods)
+            {
+                if (food.Vegan)
+                {
+                    Console.WriteLine(food.GoodToEat());
+                }
+                else
+                    Console.WriteLine(food.GoodToEat());
+            }
 
             Console.ReadLine();
 

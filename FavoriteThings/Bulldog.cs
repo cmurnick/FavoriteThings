@@ -10,45 +10,18 @@ namespace FavoriteThings
     public class Bulldog
     {
         
-       
-        protected string _color;
-        protected string _name;
 
-        public string Color
-        {
-            get
-            {
-                return _color;
-            }
-            set
-            {
-                _color = value;
-            }
+        public string Color { get; set; }
+        public string Name { get; set; }
 
-        }
-
-
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-        }
-
- 
 
         public Bulldog(string name)
         {
-            _name = name;
-            //Console.WriteLine("\n" + "My bulldog's Name is" + _name);
+            Name = name;
             PrintName();
             
         }
+
 
         public void PrintName()
         {

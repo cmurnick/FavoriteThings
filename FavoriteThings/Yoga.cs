@@ -8,44 +8,20 @@ namespace FavoriteThings
 {
     public class Yoga
     {
-        protected string _pose;
-        protected string _type;
 
-        public string Pose
+        public string Pose { get; set; }
+        public bool Hot { get; set; }
+        public string Studio { get; set; }
+
+        public string WhereToGo()
         {
-            get
-            {
-                return _pose;
-            }
-            set
-            {
-                _pose = value;
-            }
+            return Hot
+
+             ? $"{Studio} is a hot studio.  If you're sensitive to the heat, you will want to do {Pose} somewhere else. \n "
+             : $"{Studio} is of normal temperature, so you won't die.  Sometimes it is nice to do {Pose} in these conditions";
 
         }
 
-
-        public string Type
-        {
-            get
-            {
-                return _type;
-            }
-            set
-            {
-                _type = value;
-            }
-        }
-
-        public Yoga(string pose)
-        {
-            _pose = pose;
-            PrintName();
-        }
-
-        public void PrintName()
-        {
-            Console.WriteLine("This yoga pose is: " + Pose);
-        }
     }
+
 }

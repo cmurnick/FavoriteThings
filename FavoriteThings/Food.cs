@@ -8,46 +8,19 @@ namespace FavoriteThings
 {
     class Food
     {
-       
-            protected string _name;
-            protected string _foodGroup;
 
-            public string Name
-            {
-                get
-                {
-                    return _name;
-                }
-                set
-                {
-                    _name = value;
-                }
+        public string Name { get; set; }
+        public string FoodGroup { get; set; }
+        public bool Vegan  { get; set; }
 
-            }
+        public string GoodToEat()
+        {
+        return Vegan
 
-
-            public string FoodGroup
-            {
-                get
-                {
-                    return _foodGroup;
-                }
-                set
-                {
-                    _foodGroup = value;
-                }
-            }
-
-            public Food(string name)
-            {
-                _name = name;
-                PrintName();
-            }
-
-            public void PrintName()
-            {
-                Console.WriteLine("This food is: " + Name);
-            }
+        ? $"{Name} is Vegan!  It's good for you and tastes good!!"
+        : $"You might want to think twice before eating {Name}.  It's not the healthies option";
+                
+        }
         
     }
 }
